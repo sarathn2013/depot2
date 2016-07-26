@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Commerce Sports Store</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
+	<div id="banner">
+	<%= image_tag("logo.png") %>
+	<%= @page_titile || "CSS" %>
+	</div>
+	<div id="columns">
+		<div id="side">
+			<ul><li><%= link_to Time.now.strftime("%m/%d/%Y  %I:%M%p") %></li></ul>
+		<ul>
+		<li><a href="http://www....../Home">Home</a></li>
+		<li><a href="http://www....../Questions">Questions</a></li>
+		<li><a href="http://www....../News">News</a></li>
+		<li><a href="http://www....../Contact">Contact</a></li>
+		
+		</ul>
+	    </div>
+	</div>
+	
 <%= yield %>
 
 </body>
