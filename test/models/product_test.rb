@@ -58,6 +58,15 @@ end
     assert_equal ["has already been taken"], product.errors[:title]
     end
     
+    test "product is not vaild without a unique image url" do
+    product = Product.new(title: "akyyjha",
+                          description: "yyy",
+                          price: 23,
+                          image_url: products(:ruby).image_url)
+    assert product.invalid?
+    assert_equal ["has already been taken"], product.errors[:image_url]
+    end
+    
     test "product is not valid without a unique title - i18n" do
       product = Product.new(title:       products(:ruby).title,
                         description: "yyy",

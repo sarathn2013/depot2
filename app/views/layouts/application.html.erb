@@ -13,9 +13,13 @@
 	</div>
 	<div id="columns">
 		<div id="side">
-			<ul><li><%= link_to Time.now.strftime("%m/%d/%Y  %I:%M%p") %></li></ul>
+			<div id="cart">
+				<%= render @cart %>
+			</div>
+			<ul>
+				<li><%= link_to Time.now.strftime("%m/%d/%Y  %I:%M%p") %></li></ul>
 		<ul>
-		<li><a href="http://www....../Home">Home</a></li>
+		<li><a href="https://depot-sarathn2013.c9users.io/">Home</a></li>
 		<li><a href="http://www....../Questions">Questions</a></li>
 		<li><a href="http://www....../News">News</a></li>
 		<li><a href="http://www....../Contact">Contact</a></li>
